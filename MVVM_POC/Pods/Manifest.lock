@@ -1,0 +1,61 @@
+PODS:
+  - Alamofire (4.8.2)
+  - AlamofireNetworkActivityLogger (2.4.0):
+    - Alamofire (~> 4.8)
+  - JWTDecode (2.3.0)
+  - KeychainSwift (16.0.1)
+  - Locksmith (4.0.0)
+  - Realm (3.17.0):
+    - Realm/Headers (= 3.17.0)
+  - Realm/Headers (3.17.0)
+  - RealmSwift (3.17.0):
+    - Realm (= 3.17.0)
+  - RxCocoa (5.0.0):
+    - RxRelay (~> 5)
+    - RxSwift (~> 5)
+  - RxRelay (5.0.0):
+    - RxSwift (~> 5)
+  - RxSwift (5.0.0)
+  - ScreenType (1.1.0)
+
+DEPENDENCIES:
+  - Alamofire
+  - AlamofireNetworkActivityLogger
+  - JWTDecode
+  - KeychainSwift
+  - Locksmith
+  - RealmSwift
+  - RxCocoa
+  - RxSwift
+  - ScreenType
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - AlamofireNetworkActivityLogger
+    - JWTDecode
+    - KeychainSwift
+    - Locksmith
+    - Realm
+    - RealmSwift
+    - RxCocoa
+    - RxRelay
+    - RxSwift
+    - ScreenType
+
+SPEC CHECKSUMS:
+  Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
+  AlamofireNetworkActivityLogger: 6d3398c692d2c5d83b0c58793537860aca1e383d
+  JWTDecode: fb77675c8049c1a7e9433c7cf448c3ce33ee4ac7
+  KeychainSwift: 4209611373ca4a098e09b1e547eebd87c544dcc4
+  Locksmith: e9bebbaaa4cee3c511bc358a44f843c3fe00e21f
+  Realm: b30db41ff34fc858ffc25ba8d44a82c164e7ccd0
+  RealmSwift: fe733e459d60dc7b6971d4cbee2eb4854097d12c
+  RxCocoa: fcf32050ac00d801f34a7f71d5e8e7f23026dcd8
+  RxRelay: 4f7409406a51a55cd88483f21ed898c234d60f18
+  RxSwift: 8b0671caa829a763bbce7271095859121cbd895f
+  ScreenType: aa607eaa564b5e533876a4df92a5b9de1a8dc579
+
+PODFILE CHECKSUM: 2c9d4663f23f34720da42ae996bb9b12f2032e2f
+
+COCOAPODS: 1.7.4

@@ -1,0 +1,12 @@
+${PODS_ROOT}/Target Support Files/Pods-MVVM_POC/Pods-MVVM_POC-frameworks.sh
+${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework
+${BUILT_PRODUCTS_DIR}/AlamofireNetworkActivityLogger/AlamofireNetworkActivityLogger.framework
+${BUILT_PRODUCTS_DIR}/JWTDecode/JWTDecode.framework
+${BUILT_PRODUCTS_DIR}/KeychainSwift/KeychainSwift.framework
+${BUILT_PRODUCTS_DIR}/Locksmith/Locksmith.framework
+${BUILT_PRODUCTS_DIR}/Realm/Realm.framework
+${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework
+${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework
+${BUILT_PRODUCTS_DIR}/RxRelay/RxRelay.framework
+${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework
+${BUILT_PRODUCTS_DIR}/ScreenType/ScreenType.framework

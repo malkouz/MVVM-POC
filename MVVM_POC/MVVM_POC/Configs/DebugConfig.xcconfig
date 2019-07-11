@@ -1,0 +1,17 @@
+//
+//  DebugConfig.xcconfig
+//  MVVM_POC
+//
+//  Created by Moayad Al kouz on 7/10/19.
+//  Copyright © 2019 Moayad Al kouz. All rights reserved.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+IS_APP_NAME = MVVM Debug
+IS_APP_VERSION = 1.0
+IS_APP_BUNDLE_ID = com.intensifystudio.DonateDebug
+
+PROTOCOl = https
+Base_URL = api.github.com/

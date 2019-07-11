@@ -1,0 +1,29 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'MVVM_POC' do
+    # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+    use_frameworks!
+    
+    # Pods for MVVM_POC
+#    pod 'WCLShineButton'
+    pod 'Alamofire'
+    pod 'RealmSwift'
+    pod 'ScreenType'
+    pod 'AlamofireNetworkActivityLogger'
+    
+    pod 'KeychainSwift'
+    pod 'RxSwift'
+    pod 'RxCocoa'
+    pod 'JWTDecode'
+    pod 'Locksmith'
+#    pod 'AlamofireImage'
+
+#    post_install do |installer|
+#       installer.pods_project.targets.each do |target|
+#           target.build_configurations.each do |config|
+#               config.build_settings['SWIFT_VERSION'] = '4.2'
+#           end
+#       end
+#   end
+end

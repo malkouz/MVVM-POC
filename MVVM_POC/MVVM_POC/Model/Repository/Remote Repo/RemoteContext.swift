@@ -17,7 +17,13 @@ enum ContentType: String{
     case urlEncoded = "application/x-www-form-urlencoded"
 }
 
-final class RemoteContext {
+protocol RemoteContextProtocol {
+    func request(endPoint: EndPointProtocol, parameters:Parameters?, completion: @escaping Handler<Any>)
+    func request(endPoint: EndPointProtocol, paramsAny:[Any]?, completion: @escaping Handler<Any>)
+    func multipartRequest(endPoint: EndPointProtocol, params:Parameters?, multipartName: String?, uploadFiles: [AttachmentModel]?, completion: @escaping Handler<Any>)
+}
+
+final class RemoteContext: RemoteContextProtocol {
     
     
     //MARK: - Properties

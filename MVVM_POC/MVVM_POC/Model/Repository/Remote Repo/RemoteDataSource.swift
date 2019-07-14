@@ -14,7 +14,7 @@ class RemoteDataSource: DataSourceProtocol{
    
 
 
-    private var remoteContext: RemoteContext!
+    private var remoteContext: RemoteContextProtocol!
     
     init() {
         //load url from xconfig file

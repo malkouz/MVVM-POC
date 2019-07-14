@@ -10,9 +10,15 @@ LocalContext is a singleton class that handles local database operations.
 
 import RealmSwift
 
-//TODO: Add migration
+protocol LocalContextProtocol {
+    func upsert(objects: [Object], completion: ((Any?) -> ())?)
+    func retrieve(from type: Object.Type, filterBy: NSPredicate?, completion: (Any?, [Object]?) -> ())
+    func delete(objects: [Object], filterBy filter: NSPredicate?, completion: ((Any?) -> ())?)
+    func clearTable(from type: Object.Type, completion: ((Any?) -> ())?)
+    func clearLocalDataStorage(completion: ((Any?) -> ())?)
+}
 
-class LocalContext {
+class LocalContext: LocalContextProtocol {
 	
 	
 	//MARK: - Properties
@@ -57,12 +63,12 @@ class LocalContext {
 	///   - objects: an Array of Realm Objects
 	///   - completion: a callback function that is invoked when the operation is completed. The function returns true when the operation
 	///					is successful, and NSError object when the operation has failed.
-	public func upsert(objects: [Object], completion: ((Any?) -> ())? = nil){
+    func upsert(objects: [Object], completion: ((Any?) -> ())? = nil){
 		do {
 			self.realm = try Realm()
 			try realm.write {
 				objects.forEach({ (object) in
-					realm.add(object, update: true)
+                    realm.add(object, update: .all)
 				})
 				completion?(true)
 			}
@@ -82,7 +88,7 @@ class LocalContext {
 	///   - filterBy: NSPredicate, optional wil nil as default value
 	///   - completion: a callback function that is invoked when the operation is completed. The function returns true and an array of Object when the operation
 	///					is successful, and NSError object when the operation has failed.
-	public func retrieve(from type: Object.Type, filterBy: NSPredicate? = nil, completion: (Any?, [Object]?) -> ()){
+    func retrieve(from type: Object.Type, filterBy: NSPredicate? = nil, completion: (Any?, [Object]?) -> ()){
 		do {
 			self.realm = try Realm()
 			let result = filterBy == nil ? Array(realm.objects(type.self)) : Array(realm.objects(type.self).filter(filterBy!))
@@ -104,7 +110,7 @@ class LocalContext {
 	///   - completion: A callback function invoked when the operation is completed.
 	///			- Paramters:
 	///				- Any?: returns true if the operation has been successful, NSError object if an error has occured.
-	public func delete(objects: [Object], filterBy filter: NSPredicate? = nil, completion: ((Any?) -> ())? = nil){
+    func delete(objects: [Object], filterBy filter: NSPredicate? = nil, completion: ((Any?) -> ())? = nil){
 		do {
 			self.realm = try Realm()
 			try realm.write {
@@ -127,7 +133,7 @@ class LocalContext {
     ///   - filterBy: NSPredicate, optional wil nil as default value
     ///   - completion: a callback function that is invoked when the operation is completed. The function returns true and an array of Object when the operation
     ///                    is successful, and NSError object when the operation has failed.
-    public func clearTable(from type: Object.Type, completion: ((Any?) -> ())? = nil){
+    func clearTable(from type: Object.Type, completion: ((Any?) -> ())? = nil){
         do {
             self.realm = try Realm()
             let objects = realm.objects(type.self)

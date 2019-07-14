@@ -70,7 +70,7 @@ extension ReposListViewController: UISearchBarDelegate{
         viewModel.serachRepos(queryString: searchText, success: { [weak self] in
             self?.tableView.reloadData()
         }) { (error) in
-            print("Error :: ", error?.localizedDescription)
+            print("Error :: ", error?.localizedDescription ?? "")
         }
     }
 }

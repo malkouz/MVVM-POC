@@ -10,7 +10,7 @@ import Foundation
 
 class LocalDataSource: DataSourceProtocol{
     //MARK: - Properties
-    lazy var localContext = LocalContext()
+    lazy var localContext: LocalContextProtocol = LocalContext()
     
     func searchRepos(queryString: String, completionHandler: @escaping Handler<SearchReposResults>) {
         fatalError("Search online only")

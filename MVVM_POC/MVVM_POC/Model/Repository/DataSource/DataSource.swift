@@ -7,6 +7,10 @@
 
 import Foundation
 
+
+typealias Handler<T> = (Result<T?, NSError>) -> Void
+
+
 protocol DataSourceProtocol {
     func searchRepos(queryString: String, completionHandler: @escaping Handler<SearchReposResults>)
 }

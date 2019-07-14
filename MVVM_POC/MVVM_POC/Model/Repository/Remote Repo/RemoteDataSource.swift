@@ -7,7 +7,6 @@
 
 import Foundation
 
-typealias Handler<T> = (Result<T?, NSError>) -> Void
 
 
 class RemoteDataSource: DataSourceProtocol{
